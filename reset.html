@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reset Password | DM Engine</title>
+<meta name="description" content="Reset your DM Engine account password.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0C'/%3E%3Cpolygon points='32,12 49,22 49,42 32,52 15,42 15,22' fill='none' stroke='%23C9A84C' stroke-width='2.5'/%3E%3Cline x1='32' y1='12' x2='32' y2='52' stroke='%23C9A84C' stroke-width='1.2' opacity='.6'/%3E%3Cline x1='15' y1='22' x2='49' y2='42' stroke='%23C9A84C' stroke-width='1.2' opacity='.6'/%3E%3Cline x1='49' y1='22' x2='15' y2='42' stroke='%23C9A84C' stroke-width='1.2' opacity='.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0A0A0C;
+  --card: #11110D;
+  --card2: #16140F;
+  --gold: #C9A84C;
+  --goldDeep: #8F7836;
+  --ink: #EDEAE2;
+  --muted: #8A8578;
+  --line: rgba(201,168,76,.22);
+  --error: #E37B68;
+  --success: #8FD6A5;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --serif: "Cormorant Garamond", Georgia, serif;
+}
+* { box-sizing: border-box; }
+body {
+  min-height: 100svh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 12%, rgba(201,168,76,.10), transparent 70%),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+.card {
+  width: min(100%, 440px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(22,20,15,.98), rgba(12,12,12,.98));
+  box-shadow: 0 24px 80px rgba(0,0,0,.45);
+  padding: 28px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+}
+.sigil {
+  width: 34px;
+  height: 34px;
+  flex: none;
+}
+h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(34px, 8vw, 46px);
+  line-height: 1;
+  font-weight: 600;
+  color: var(--ink);
+}
+p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+form {
+  margin-top: 24px;
+  display: grid;
+  gap: 14px;
+}
+label {
+  display: grid;
+  gap: 7px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+input {
+  width: 100%;
+  appearance: none;
+  border: 1px solid rgba(201,168,76,.34);
+  border-radius: 12px;
+  background: rgba(0,0,0,.28);
+  color: var(--ink);
+  font: 16px var(--sans);
+  padding: 13px 14px;
+  outline: none;
+}
+input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,.13);
+}
+button {
+  margin-top: 4px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #0A0A0C;
+  cursor: pointer;
+  font: 700 15px var(--sans);
+  padding: 13px 20px;
+}
+button:disabled {
+  cursor: wait;
+  opacity: .62;
+}
+.message {
+  min-height: 22px;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.message.error { color: var(--error); }
+.message.success { color: var(--success); }
+.message.info { color: var(--muted); }
+.hidden { display: none; }
+.home-link {
+  display: inline-flex;
+  margin-top: 18px;
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="brand">
+      <svg class="sigil" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0A0A0C"></rect>
+        <polygon points="32,12 49,22 49,42 32,52 15,42 15,22" fill="none" stroke="#C9A84C" stroke-width="2.5"></polygon>
+        <line x1="32" y1="12" x2="32" y2="52" stroke="#C9A84C" stroke-width="1.2" opacity=".6"></line>
+        <line x1="15" y1="22" x2="49" y2="42" stroke="#C9A84C" stroke-width="1.2" opacity=".6"></line>
+        <line x1="49" y1="22" x2="15" y2="42" stroke="#C9A84C" stroke-width="1.2" opacity=".6"></line>
+      </svg>
+      <span>DM Engine</span>
+    </div>
+
+    <section id="loading">
+      <h1>Reset Password</h1>
+      <p>Checking your reset link...</p>
+      <div class="message info">This should only take a moment.</div>
+    </section>
+
+    <section id="no-token" class="hidden">
+      <h1>DM Engine</h1>
+      <p>Open the password reset link from your email to choose a new password.</p>
+      <p>If the link expired, request another reset from the app.</p>
+      <a class="home-link" href="./">Return to DM Engine</a>
+    </section>
+
+    <section id="reset-form" class="hidden">
+      <h1>Choose a New Password</h1>
+      <p>Enter a new password for your DM Engine account.</p>
+      <form id="form">
+        <label>
+          New password
+          <input id="password" type="password" autocomplete="new-password" minlength="8" required>
+        </label>
+        <label>
+          Confirm password
+          <input id="confirm" type="password" autocomplete="new-password" minlength="8" required>
+        </label>
+        <button id="submit" type="submit">Update Password</button>
+      </form>
+      <div id="message" class="message"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+  const SUPABASE_URL = 'https://yjppyqxormvadhggcbrs.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqcHB5cXhvcm12YWRoZ2djYnJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2MjYxOTIsImV4cCI6MjA5MTIwMjE5Mn0.W1bmUDRCEr4xG44BbW5CrV5gy6eEA4g42vqF-c-qY9E';
+
+  const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    auth: {
+      detectSessionInUrl: true,
+      persistSession: true,
+      autoRefreshToken: false,
+    },
+  });
+
+  const $ = (id) => document.getElementById(id);
+  const sections = ['loading', 'no-token', 'reset-form'];
+
+  function show(id) {
+    sections.forEach((section) => $(section).classList.toggle('hidden', section !== id));
+  }
+
+  function setMessage(text, kind = 'info') {
+    const el = $('message');
+    el.textContent = text;
+    el.className = `message ${kind}`;
+  }
+
+  async function establishRecoverySession() {
+    const hash = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+    const query = new URLSearchParams(window.location.search);
+
+    const accessToken = hash.get('access_token');
+    const refreshToken = hash.get('refresh_token');
+    if (accessToken && refreshToken) {
+      const { error } = await client.auth.setSession({
+        access_token: accessToken,
+        refresh_token: refreshToken,
+      });
+      if (error) throw error;
+      return true;
+    }
+
+    const code = query.get('code');
+    if (code) {
+      const { error } = await client.auth.exchangeCodeForSession(code);
+      if (error) throw error;
+      return true;
+    }
+
+    const tokenHash = query.get('token_hash') || hash.get('token_hash');
+    const type = query.get('type') || hash.get('type');
+    if (tokenHash && type === 'recovery') {
+      const { error } = await client.auth.verifyOtp({
+        type: 'recovery',
+        token_hash: tokenHash,
+      });
+      if (error) throw error;
+      return true;
+    }
+
+    const { data } = await client.auth.getSession();
+    return Boolean(data.session);
+  }
+
+  async function init() {
+    try {
+      const ready = await establishRecoverySession();
+      show(ready ? 'reset-form' : 'no-token');
+    } catch (error) {
+      show('no-token');
+      console.warn('Password reset link error:', error);
+    }
+  }
+
+  $('form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const password = $('password').value;
+    const confirm = $('confirm').value;
+
+    if (password.length < 8) {
+      setMessage('Password must be at least 8 characters.', 'error');
+      return;
+    }
+
+    if (password !== confirm) {
+      setMessage('Passwords do not match.', 'error');
+      return;
+    }
+
+    $('submit').disabled = true;
+    setMessage('Updating password...', 'info');
+
+    const { error } = await client.auth.updateUser({ password });
+    if (error) {
+      $('submit').disabled = false;
+      setMessage(error.message || 'Could not update password. Request a new reset link and try again.', 'error');
+      return;
+    }
+
+    await client.auth.signOut();
+    setMessage('Password updated. Return to DM Engine and sign in with your new password.', 'success');
+    $('form').classList.add('hidden');
+  });
+
+  init();
+  </script>
+</body>
+</html>
