@@ -7,9 +7,6 @@
 <meta name="description" content="Reset your DM Engine account password.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0C'/%3E%3Cpolygon points='32,12 49,22 49,42 32,52 15,42 15,22' fill='none' stroke='%23C9A84C' stroke-width='2.5'/%3E%3Cline x1='32' y1='12' x2='32' y2='52' stroke='%23C9A84C' stroke-width='1.2' opacity='.6'/%3E%3Cline x1='15' y1='22' x2='49' y2='42' stroke='%23C9A84C' stroke-width='1.2' opacity='.6'/%3E%3Cline x1='49' y1='22' x2='15' y2='42' stroke='%23C9A84C' stroke-width='1.2' opacity='.6'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #0A0A0C;
@@ -23,7 +20,7 @@
   --error: #E37B68;
   --success: #8FD6A5;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --serif: "Cormorant Garamond", Georgia, serif;
+  --serif: Georgia, "Times New Roman", serif;
 }
 * { box-sizing: border-box; }
 body {
@@ -172,11 +169,11 @@ button:disabled {
       <form id="form">
         <label>
           New password
-          <input id="password" type="password" autocomplete="new-password" minlength="8" required>
+          <input id="password" type="password" autocomplete="new-password" required>
         </label>
         <label>
           Confirm password
-          <input id="confirm" type="password" autocomplete="new-password" minlength="8" required>
+          <input id="confirm" type="password" autocomplete="new-password" required>
         </label>
         <button id="submit" type="submit">Update Password</button>
       </form>
@@ -263,11 +260,6 @@ button:disabled {
     const password = $('password').value;
     const confirm = $('confirm').value;
 
-    if (password.length < 8) {
-      setMessage('Password must be at least 8 characters.', 'error');
-      return;
-    }
-
     if (password !== confirm) {
       setMessage('Passwords do not match.', 'error');
       return;
@@ -284,7 +276,7 @@ button:disabled {
     }
 
     await client.auth.signOut();
-    setMessage('Password updated. Return to DM Engine and sign in with your new password.', 'success');
+    setMessage('Password updated — return to the app and sign in.', 'success');
     $('form').classList.add('hidden');
   });
 
