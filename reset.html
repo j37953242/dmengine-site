@@ -163,6 +163,12 @@ button:disabled {
       <a class="home-link" href="./">Return to DM Engine</a>
     </section>
 
+    <section id="signed-in" class="hidden">
+      <h1>You're already signed in</h1>
+      <p>This link is not a password recovery link. Your password has not been changed.</p>
+      <a class="home-link" href="./">Return to DM Engine</a>
+    </section>
+
     <section id="reset-form" class="hidden">
       <h1>Choose a New Password</h1>
       <p>Enter a new password for your DM Engine account.</p>
@@ -186,6 +192,13 @@ button:disabled {
   const SUPABASE_URL = 'https://yjppyqxormvadhggcbrs.supabase.co';
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqcHB5cXhvcm12YWRoZ2djYnJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2MjYxOTIsImV4cCI6MjA5MTIwMjE5Mn0.W1bmUDRCEr4xG44BbW5CrV5gy6eEA4g42vqF-c-qY9E';
 
+  // This is the only manual URL parsing. It reads the recovery discriminator,
+  // never credentials; supabase-js alone consumes access tokens and PKCE codes.
+  const queryType = new URLSearchParams(window.location.search).get('type');
+  const hashType = new URLSearchParams(window.location.hash.replace(/^#/, '')).get('type');
+  const urlDeclaresRecovery = queryType === 'recovery' || hashType === 'recovery';
+  const urlHasCallbackPayload = window.location.search.length > 1 || window.location.hash.length > 1;
+
   const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
     auth: {
       detectSessionInUrl: true,
@@ -195,7 +208,13 @@ button:disabled {
   });
 
   const $ = (id) => document.getElementById(id);
-  const sections = ['loading', 'no-token', 'reset-form'];
+  const sections = ['loading', 'no-token', 'signed-in', 'reset-form'];
+  let recoveryEventSession = null;
+  let recoverySessionActive = false;
+
+  client.auth.onAuthStateChange((event, session) => {
+    if (event === 'PASSWORD_RECOVERY') recoveryEventSession = session;
+  });
 
   function show(id) {
     sections.forEach((section) => $(section).classList.toggle('hidden', section !== id));
@@ -207,55 +226,42 @@ button:disabled {
     el.className = `message ${kind}`;
   }
 
-  async function establishRecoverySession() {
-    const hash = new URLSearchParams(window.location.hash.replace(/^#/, ''));
-    const query = new URLSearchParams(window.location.search);
+  async function resolveResetRoute() {
+    const { data, error } = await client.auth.getSession();
+    if (error) throw error;
 
-    const accessToken = hash.get('access_token');
-    const refreshToken = hash.get('refresh_token');
-    if (accessToken && refreshToken) {
-      const { error } = await client.auth.setSession({
-        access_token: accessToken,
-        refresh_token: refreshToken,
-      });
-      if (error) throw error;
-      return true;
-    }
+    // Supabase emits PASSWORD_RECOVERY on a timer after URL initialization.
+    // Yield once so that genuine event can become the discriminator as well.
+    await new Promise((resolve) => setTimeout(resolve, 0));
 
-    const code = query.get('code');
-    if (code) {
-      const { error } = await client.auth.exchangeCodeForSession(code);
-      if (error) throw error;
-      return true;
-    }
+    const session = recoveryEventSession || data.session;
+    const recovery = Boolean(recoveryEventSession)
+      || (urlDeclaresRecovery && Boolean(session));
 
-    const tokenHash = query.get('token_hash') || hash.get('token_hash');
-    const type = query.get('type') || hash.get('type');
-    if (tokenHash && type === 'recovery') {
-      const { error } = await client.auth.verifyOtp({
-        type: 'recovery',
-        token_hash: tokenHash,
-      });
-      if (error) throw error;
-      return true;
-    }
-
-    const { data } = await client.auth.getSession();
-    return Boolean(data.session);
+    return {
+      recovery,
+      signedIn: Boolean(session) || (!urlDeclaresRecovery && urlHasCallbackPayload),
+    };
   }
 
   async function init() {
     try {
-      const ready = await establishRecoverySession();
-      show(ready ? 'reset-form' : 'no-token');
+      const route = await resolveResetRoute();
+      recoverySessionActive = route.recovery;
+      show(route.recovery ? 'reset-form' : route.signedIn ? 'signed-in' : 'no-token');
     } catch (error) {
-      show('no-token');
+      show(urlDeclaresRecovery ? 'no-token' : 'signed-in');
       console.warn('Password reset link error:', error);
     }
   }
 
   $('form').addEventListener('submit', async (event) => {
     event.preventDefault();
+
+    if (!recoverySessionActive) {
+      show('signed-in');
+      return;
+    }
 
     const password = $('password').value;
     const confirm = $('confirm').value;
@@ -275,6 +281,8 @@ button:disabled {
       return;
     }
 
+    // Only the genuine recovery route can reach this branch. Signing out here
+    // makes the user prove the newly chosen password on their next app login.
     await client.auth.signOut();
     setMessage('Password updated — return to the app and sign in.', 'success');
     $('form').classList.add('hidden');
