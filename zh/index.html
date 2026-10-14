@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DM Engine｜AI 地下城主・線上 TRPG 跑團，瀏覽器或 iPhone 免費開玩</title>
+<meta name="description" content="沒有 DM 也能跑團。DM Engine 的 AI 地下城主用 5e 規則帶你冒險：說故事、叫你擲骰、管戰鬥，還記得你做過的每個選擇。單人或揪最多 4 位朋友，繁體中文，免費開始。">
+<link rel="canonical" href="https://dmengineapp.com/zh/">
+<link rel="alternate" hreflang="zh-Hant" href="https://dmengineapp.com/zh/">
+<link rel="alternate" hreflang="en" href="https://dmengineapp.com/">
+<link rel="alternate" hreflang="x-default" href="https://dmengineapp.com/">
+<meta name="theme-color" content="#0A0A0C">
+<meta property="og:site_name" content="DM Engine">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="DM Engine｜AI 地下城主・線上跑團">
+<meta property="og:description" content="每個故事都需要一位地下城主。現在你有了。繁體中文，瀏覽器或 iPhone 免費開玩。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dmengineapp.com/zh/">
+<meta property="og:image" content="https://dmengineapp.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dmengineapp.com/og-image.png">
+<meta name="apple-itunes-app" content="app-id=6762107792">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0C'/%3E%3Cpolygon points='32,12 49,22 49,42 32,52 15,42 15,22' fill='none' stroke='%23C9A84C' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"VideoGame","name":"DM Engine","url":"https://dmengineapp.com/zh/","inLanguage":"zh-Hant",
+"description":"AI 地下城主用 5e 規則帶你跑團。單人或最多 4 人，繁體中文，瀏覽器或 iPhone 免費開始。",
+"image":"https://dmengineapp.com/og-image.png","genre":["角色扮演","TRPG"],"gamePlatform":["Web browser","iOS"],
+"playMode":["SinglePlayer","MultiPlayer"],"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":4},
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://play.dmengineapp.com/"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"不會 TRPG 也能玩嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。直接用中文打出你想做的事，規則、擲骰和戰鬥都交給 AI 地下城主。"}},
+{"@type":"Question","name":"真的免費嗎？","acceptedAnswer":{"@type":"Answer","text":"註冊就送 200 火種，每天登入還能再領。DM 每次回應用掉 2 火種，用完可以買火種包或訂閱。"}},
+{"@type":"Question","name":"可以跟朋友一起玩嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。Guild 會員可以開團，最多 4 位玩家；朋友只要註冊帳號、輸入 6 位數房號就能免費加入。"}},
+{"@type":"Question","name":"Android 手機可以玩嗎？","acceptedAnswer":{"@type":"Answer","text":"可以，用手機瀏覽器打開 play.dmengineapp.com 就能玩，不用下載。iPhone 也有 App。"}},
+{"@type":"Question","name":"有繁體中文嗎？","acceptedAnswer":{"@type":"Answer","text":"有。開新戰役時選繁體中文，DM 的旁白和回應就會用繁體中文。"}}
+]}]}
+</script>
+<style>
+:root{--bg:#0A0A0C;--bg2:#111114;--bg3:#16140F;--gold:#C9A84C;--gold-deep:#8F7836;--ink:#EDEAE2;--mut:#8A8578;
+--line:rgba(201,168,76,.16);--line-soft:rgba(237,234,226,.08);
+--sans:-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei","Noto Sans TC","Segoe UI",Roboto,sans-serif;
+--serif:"Noto Serif TC","Songti TC","PMingLiU",serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,10,12,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+.nav-in{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-size:13px;font-weight:600;letter-spacing:.32em;color:var(--gold);white-space:nowrap}
+.brand svg{width:24px;height:24px;flex:none}
+.lang{margin-left:auto;font-size:13px;color:var(--mut)}
+.lang:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:999px;padding:13px 28px;font-size:15px;font-weight:600;white-space:nowrap;transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:#0A0A0C}
+.btn-ghost{border-color:rgba(201,168,76,.45);color:var(--gold)}
+nav .btn{padding:8px 18px;font-size:13px}
+.hero{min-height:92vh;display:flex;align-items:center;text-align:center;padding:120px 0 80px;
+background:radial-gradient(ellipse 60% 55% at 50% 40%,#1d1810 0%,var(--bg) 70%)}
+.hero .wrap{width:100%}
+.eyebrow{font-size:12px;letter-spacing:.32em;color:var(--gold);font-weight:600}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(38px,6.4vw,70px);line-height:1.25;margin-top:22px}
+h1 em,h2 em{font-style:normal;color:var(--gold)}
+.sub{max-width:640px;margin:26px auto 0;color:var(--mut);font-size:18px}
+.cta-row{margin-top:38px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center}
+.cta-note{width:100%;font-size:13px;color:var(--mut);letter-spacing:.08em}
+section{padding:96px 0;border-top:1px solid var(--line-soft)}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(30px,4.2vw,44px);line-height:1.3;margin-top:14px}
+.lead{color:var(--mut);margin-top:16px;max-width:640px}
+.grid3{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line-soft);border-radius:18px;padding:28px 26px;background:var(--bg2)}
+.card h3{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--ink)}
+.card p{color:var(--mut);margin-top:10px;font-size:15.5px}
+.num{font-family:var(--serif);color:var(--gold);font-size:30px;font-weight:700;line-height:1}
+.quote{margin:56px auto 0;max-width:760px;text-align:center}
+.quote p{font-family:var(--serif);font-size:clamp(22px,3vw,28px);line-height:1.6}
+.quote span{display:block;margin-top:14px;font-size:12px;letter-spacing:.16em;color:var(--mut)}
+.party{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.party ul{margin-top:24px;display:grid;gap:12px}
+.party li{list-style:none;color:var(--mut);display:flex;gap:10px}
+.party li::before{content:"—";color:var(--gold-deep);flex:none}
+.code{border:1px solid var(--line);border-radius:20px;padding:34px;text-align:center;background:var(--bg3)}
+.code b{display:block;font-size:44px;letter-spacing:.3em;color:var(--gold);font-weight:600;margin:10px 0}
+.code small{color:var(--mut);font-size:14px}
+.price-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.plan{border:1px solid var(--line-soft);border-radius:20px;padding:30px 22px;display:flex;flex-direction:column;background:var(--bg2);position:relative}
+.plan.hot{border-color:var(--gold);background:var(--bg3)}
+.badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0A0A0C;font-size:11px;font-weight:700;letter-spacing:.18em;padding:4px 12px;border-radius:999px;white-space:nowrap}
+.plan h3{font-size:13px;font-weight:600;letter-spacing:.2em;color:var(--mut)}
+.plan.hot h3{color:var(--gold)}
+.price{font-family:var(--serif);font-size:38px;font-weight:700;margin-top:12px}
+.price small{font-family:var(--sans);font-size:14px;color:var(--mut);font-weight:400}
+.plan ul{margin:20px 0 26px;display:grid;gap:9px}
+.plan li{list-style:none;font-size:14.5px;color:var(--mut);display:flex;gap:9px}
+.plan li::before{content:"—";color:var(--gold-deep);flex:none}
+.plan .btn{margin-top:auto;width:100%}
+.fine{margin-top:30px;text-align:center;color:var(--mut);font-size:15px}
+.fine b{color:var(--gold);font-weight:600}
+.faq{margin-top:40px;display:grid;gap:12px;max-width:820px}
+details{border:1px solid var(--line-soft);border-radius:14px;padding:18px 22px;background:var(--bg2)}
+summary{cursor:pointer;font-weight:600;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--gold)}
+details[open] summary::after{content:"−"}
+details p{color:var(--mut);margin-top:10px;font-size:15.5px}
+.final{text-align:center}
+footer{border-top:1px solid var(--line-soft);padding:48px 0 60px;color:var(--mut);font-size:13px;line-height:1.8}
+footer .row{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:18px}
+footer a:hover{color:var(--ink)}
+@media (max-width:980px){.price-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){.grid3{grid-template-columns:1fr}.party{grid-template-columns:1fr}
+.nav-in{gap:10px;padding:12px 16px}.brand{letter-spacing:.2em}nav .btn{padding:7px 12px;font-size:12px}.hide-sm{display:none}}
+@media (max-width:560px){.price-grid{grid-template-columns:1fr}section{padding:72px 0}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="DM Engine 首頁">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,8 52,20 52,44 32,56 12,44 12,20" fill="none" stroke="#C9A84C" stroke-width="3"/><line x1="32" y1="8" x2="32" y2="56" stroke="#C9A84C" stroke-width="1.4" opacity=".55"/><line x1="12" y1="20" x2="52" y2="44" stroke="#C9A84C" stroke-width="1.4" opacity=".55"/><line x1="52" y1="20" x2="12" y2="44" stroke="#C9A84C" stroke-width="1.4" opacity=".55"/></svg>
+      DM ENGINE
+    </a>
+    <a class="lang" href="/" hreflang="en" lang="en">English</a>
+    <a class="btn btn-gold" href="https://play.dmengineapp.com">免費開玩</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">AI 地下城主・線上跑團</p>
+    <h1>每個故事都需要一位地下城主。<br><em>現在你有了。</em></h1>
+    <p class="sub">DM Engine 的 AI 地下城主用 5e 規則帶團：說故事、叫你擲骰、管戰鬥，還記得你上次做了什麼。繁體中文，打開瀏覽器就能玩。</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://play.dmengineapp.com">在瀏覽器免費開玩</a>
+      <a class="btn btn-ghost" href="https://apps.apple.com/app/id6762107792">App Store 下載</a>
+      <span class="cta-note">免費開始・網頁 + iPhone・繁體中文</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">沒有 DM？</p>
+    <h2>不用等人湊團，<em>想玩就開。</em></h2>
+    <p class="lead">跑團最難的不是規則，是找到願意當 DM 的人。DM Engine 讓你隨時有一位不累、不缺席、永遠準備好的地下城主。</p>
+    <div class="grid3">
+      <div class="card"><div class="num">1</div><h3 style="margin-top:14px">建立角色</h3><p>選職業、種族和背景，寫下你的過去。DM 會把它織進故事裡。</p></div>
+      <div class="card"><div class="num">2</div><h3 style="margin-top:14px">選擇世界</h3><p>經典奇幻、哥德恐怖、九層地獄或魔法黑色懸疑，挑一個開戰役。</p></div>
+      <div class="card"><div class="num">3</div><h3 style="margin-top:14px">說出你的行動</h3><p>用中文打出你想做的事。需要擲骰時，DM 會叫你擲 d20。</p></div>
+    </div>
+    <div class="quote">
+      <p>「你將呼吸壓進胸腔深處，連指尖都凝成了樹根。霧裡的摩擦聲緩了一拍，像是也在傾聽你。」</p>
+      <span>— 真實戰役中 DM 寫下的一句話・第 1 章</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">功能</p>
+    <h2>整張桌子，<em>都在你手上。</em></h2>
+    <div class="grid3">
+      <div class="card"><h3>AI 地下城主</h3><p>場景、張力、後果，一個不缺。永遠不出戲，也永遠不會沒準備。</p></div>
+      <div class="card"><h3>完整 5e 戰鬥</h3><p>先攻、攻擊、法術位、狀態、死亡豁免，一回合一回合幫你記好。</p></div>
+      <div class="card"><h3>真的擲骰</h3><p>DM 在故事中叫你檢定，你擲出的 d20 就是結果，算數。</p></div>
+      <div class="card"><h3>語音旁白</h3><p>DM 把場景念給你聽，就像有人坐在桌邊說故事。</p></div>
+      <div class="card"><h3>場景插畫與地圖</h3><p>走進酒館、地城或港口，畫面和地圖跟著出現。</p></div>
+      <div class="card"><h3>記得你的選擇</h3><p>上次得罪的商人，這次還記得你。選擇會一章一章累積。</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap party">
+    <div>
+      <p class="eyebrow">揪團</p>
+      <h2>揪朋友，<em>一起跑。</em></h2>
+      <p class="lead">一個人開團，朋友輸入房號就能加入，同一個故事、輪流行動。不用約在同一張桌子。</p>
+      <ul>
+        <li>最多 4 位玩家同一團</li>
+        <li>Guild 會員開團，朋友免費加入</li>
+        <li>電腦、手機瀏覽器、iPhone 都能一起玩</li>
+      </ul>
+    </div>
+    <div class="code" aria-hidden="true">
+      <small>範例房號</small>
+      <b>482 913</b>
+      <small>輸入 6 位數房號就能加入</small>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <p class="eyebrow">價格</p>
+    <h2>免費開始，<em>為了故事留下來。</em></h2>
+    <div class="price-grid">
+      <div class="plan">
+        <h3>免費</h3>
+        <div class="price">$0</div>
+        <ul>
+          <li>註冊送 200 火種</li>
+          <li>每天登入再領火種</li>
+          <li>網頁或 iPhone 都能玩</li>
+          <li>免費加入朋友的團</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://play.dmengineapp.com">免費開始</a>
+      </div>
+      <div class="plan">
+        <h3>ADVENTURER</h3>
+        <div class="price">$7.99<small> / 月</small></div>
+        <ul>
+          <li>每月 500 火種</li>
+          <li>語音旁白不扣火種</li>
+          <li>網頁和 iPhone 同一帳號</li>
+          <li>支持獨立開發者</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://play.dmengineapp.com">選擇 Adventurer</a>
+      </div>
+      <div class="plan hot">
+        <span class="badge">揪團首選</span>
+        <h3>GUILD</h3>
+        <div class="price">$14.99<small> / 月</small></div>
+        <ul>
+          <li>每月 1,200 火種</li>
+          <li>開團：最多 4 位玩家</li>
+          <li>朋友免費加入</li>
+          <li>包含 Adventurer 全部內容</li>
+        </ul>
+        <a class="btn btn-gold" href="https://play.dmengineapp.com">選擇 Guild</a>
+      </div>
+      <div class="plan">
+        <h3>ARCHMAGE</h3>
+        <div class="price">$99.99<small> / 月</small></div>
+        <ul>
+          <li>每月 8,000 火種</li>
+          <li>給每天都在桌邊的玩家</li>
+          <li>包含 Guild 全部內容</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://play.dmengineapp.com">選擇 Archmage</a>
+      </div>
+    </div>
+    <p class="fine">火種用來支付 DM 的回應，每次回應 2 火種。也可以隨時購買火種包，<b>$0.99 特惠禮包</b>每個帳號限購一次。價格以美元計。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">常見問題</p>
+    <h2>開團之前，<em>先問清楚。</em></h2>
+    <div class="faq">
+      <details><summary>不會 TRPG 也能玩嗎？</summary><p>可以。直接用中文打出你想做的事，規則、擲骰和戰鬥都交給 AI 地下城主。</p></details>
+      <details><summary>真的免費嗎？</summary><p>註冊就送 200 火種，每天登入還能再領。DM 每次回應用掉 2 火種，用完可以買火種包或訂閱。</p></details>
+      <details><summary>可以跟朋友一起玩嗎？</summary><p>可以。Guild 會員可以開團，最多 4 位玩家；朋友只要註冊帳號、輸入 6 位數房號就能免費加入。</p></details>
+      <details><summary>Android 手機可以玩嗎？</summary><p>可以，用手機瀏覽器打開 play.dmengineapp.com 就能玩，不用下載。iPhone 也有 App。</p></details>
+      <details><summary>有繁體中文嗎？</summary><p>有。開新戰役時選繁體中文，DM 的旁白和回應就會用繁體中文。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>營火已經點起來了。</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto">隊伍在休息，DM 不休息。</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://play.dmengineapp.com">在瀏覽器免費開玩</a>
+      <a class="btn btn-ghost" href="https://apps.apple.com/app/id6762107792">App Store 下載</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <a href="https://play.dmengineapp.com">開始遊戲</a>
+      <a href="https://apps.apple.com/app/id6762107792">App Store</a>
+      <a href="/" hreflang="en" lang="en">English</a>
+      <a href="https://j37953242.github.io/dmengine-legal">隱私權政策</a>
+      <a href="mailto:support@dmengineapp.com">聯絡我們</a>
+    </div>
+    <p>DM Engine 是獨立開發的產品，與 Wizards of the Coast LLC 無關，也未獲其背書、贊助或特別核准。本作品包含 Wizards of the Coast LLC 的 <a href="https://dnd.wizards.com/resources/systems-reference-document" style="text-decoration:underline">System Reference Document 5.1（SRD 5.1）</a>內容，依 <a href="https://creativecommons.org/licenses/by/4.0/legalcode" style="text-decoration:underline">CC BY 4.0</a> 授權使用。</p>
+    <p style="margin-top:10px">© 2026 DM Engine</p>
+  </div>
+</footer>
+
+</body>
+</html>
