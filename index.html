@@ -242,11 +242,13 @@ h2{
 /* ---------- pricing ---------- */
 .price-grid{
   margin-top:56px;
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
   align-items:stretch;
 }
+@media (max-width:980px){.price-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.price-grid{grid-template-columns:1fr}}
 .plan{
-  border:1px solid var(--line-soft);border-radius:20px;padding:36px 30px;
+  border:1px solid var(--line-soft);border-radius:20px;padding:34px 24px;
   display:flex;flex-direction:column;background:var(--bg2);
 }
 .plan.hot{border-color:var(--gold);position:relative;background:var(--bg3)}
@@ -261,7 +263,7 @@ h2{
 .price{font-family:var(--serif);font-size:46px;font-weight:600;margin-top:14px;line-height:1}
 .price small{font-family:var(--sans);font-size:14px;color:var(--mut);font-weight:400}
 .plan ul{margin:26px 0 30px;display:grid;gap:11px}
-.plan li{list-style:none;font-size:14.5px;color:var(--mut);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.plan li{list-style:none;font-size:14.5px;color:var(--mut);display:flex;gap:10px;align-items:baseline}
 .plan li::before{content:"—";color:var(--gold-deep);flex:none}
 .plan li .soon{font-size:10.5px;letter-spacing:.14em;color:var(--gold-deep);border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin-left:6px;white-space:nowrap}
 .plan .btn{margin-top:auto;width:100%}
@@ -549,8 +551,18 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
         </ul>
         <a class="btn btn-gold" href="https://play.dmengineapp.com">Go Guild</a>
       </div>
+      <div class="plan">
+        <h3>Archmage</h3>
+        <div class="price">$99.99<small>/month</small></div>
+        <ul>
+          <li>8,000 Embers every month</li>
+          <li>For players who live at the table</li>
+          <li>Everything in Guild</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://play.dmengineapp.com">Go Archmage</a>
+      </div>
     </div>
-    <p class="lifetime reveal">Embers pay for the DM's turns. Each reply costs 2. Want more? <b>Archmage · $99.99/month</b> for 8,000 Embers, or grab an Ember pack anytime, starting with a one-time <b>$0.99 Starter</b>.</p>
+    <p class="lifetime reveal">Embers pay for the DM's turns. Each reply costs 2. Need a few more? Grab an Ember pack anytime, starting with a one-time <b>$0.99 Starter</b>.</p>
   </div>
 </section>
 
