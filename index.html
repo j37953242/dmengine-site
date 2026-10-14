@@ -75,6 +75,7 @@ nav{
 .btn-ghost{border-color:rgba(201,168,76,.45);color:var(--gold)}
 .btn-ghost:hover{background:rgba(201,168,76,.08)}
 nav .btn{padding:8px 18px;font-size:13px}
+nav .btn{white-space:nowrap}
 
 /* ---------- hero ---------- */
 .hero{
@@ -343,6 +344,9 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
 }
 @media (max-width:720px){
   .nav-links{display:none}
+  .nav-in{gap:10px;padding:12px 16px}
+  .brand{white-space:nowrap;letter-spacing:.2em}
+  nav .btn{padding:7px 12px;font-size:12px}
   .session-grid{gap:44px}
   section{padding:88px 0}
   .quote{width:240px}
@@ -363,7 +367,8 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
       <a href="#worlds">Worlds</a>
       <a href="#pricing">Pricing</a>
     </div>
-    <a class="btn btn-gold" style="margin-left:auto" href="https://apps.apple.com/app/id6762107792">Download</a>
+    <a class="btn btn-ghost" style="margin-left:auto" href="https://play.dmengineapp.com">Play now</a>
+    <a class="btn btn-gold" href="https://apps.apple.com/app/id6762107792">Download</a>
   </div>
 </nav>
 
@@ -371,10 +376,11 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
   <canvas id="ico" width="600" height="600" role="button" tabindex="0" aria-label="A twenty-sided die. Tap to roll."></canvas>
   <div class="die-line" id="dieLine" aria-live="polite">TAP THE DIE</div>
   <h1 id="heroTitle">Every story needs a Dungeon&nbsp;Master. <span class="gold">Now you have one.</span></h1>
-  <p class="sub" id="heroSub">Full 5e-compatible campaigns run by an AI Dungeon Master that narrates, remembers, and fights back. On your iPhone.</p>
+  <p class="sub" id="heroSub">Full 5e-compatible campaigns run by an AI Dungeon Master that narrates, remembers, and fights back. In your browser or on your iPhone.</p>
   <div class="cta-row" id="heroCta">
-    <a class="btn btn-gold" href="https://apps.apple.com/app/id6762107792">Download on the App&nbsp;Store</a>
-    <span class="cta-note">FREE TO START · iOS</span>
+    <a class="btn btn-gold" href="https://play.dmengineapp.com">Play in your browser</a>
+    <a class="btn btn-ghost" href="https://apps.apple.com/app/id6762107792">Download on the App&nbsp;Store</a>
+    <span class="cta-note">FREE TO START · WEB + iOS</span>
   </div>
 </header>
 
@@ -518,7 +524,7 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
           <li>Solo play</li>
           <li>Forgotten Realms lore pack</li>
         </ul>
-        <a class="btn btn-ghost" href="https://apps.apple.com/app/id6762107792">Start free</a>
+        <a class="btn btn-ghost" href="https://play.dmengineapp.com">Start free</a>
       </div>
       <div class="plan">
         <h3>Adventurer</h3>
@@ -530,7 +536,7 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
           <li>Full scene art generation</li>
           <li>Complete combat management</li>
         </ul>
-        <a class="btn btn-ghost" href="https://apps.apple.com/app/id6762107792">Go Adventurer</a>
+        <a class="btn btn-ghost" href="https://play.dmengineapp.com">Go Adventurer</a>
       </div>
       <div class="plan hot">
         <span class="badge">FULL TABLE</span>
@@ -543,7 +549,7 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
           <li>Multiplayer parties <span class="soon">SOON</span></li>
           <li>Custom world builder <span class="soon">SOON</span></li>
         </ul>
-        <a class="btn btn-gold" href="https://apps.apple.com/app/id6762107792">Go Guild</a>
+        <a class="btn btn-gold" href="https://play.dmengineapp.com">Go Guild</a>
       </div>
     </div>
     <p class="lifetime reveal">Or skip the subscription — <b>Lifetime · $99</b>, one purchase, everything forever.</p>
@@ -582,8 +588,9 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
     <h2>The fire never goes out.</h2>
     <p class="lead">The party rests. The DM doesn't.</p>
     <div class="cta-row">
-      <a class="btn btn-gold" href="https://apps.apple.com/app/id6762107792">Download on the App&nbsp;Store</a>
-      <span class="cta-note">FREE TO START · iOS</span>
+      <a class="btn btn-gold" href="https://play.dmengineapp.com">Play in your browser</a>
+      <a class="btn btn-ghost" href="https://apps.apple.com/app/id6762107792">Download on the App&nbsp;Store</a>
+      <span class="cta-note">FREE TO START · WEB + iOS</span>
     </div>
   </div>
   <div class="camp-scene">
@@ -605,6 +612,7 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
       <div class="foot-links">
         <div>
           <h4>App</h4>
+          <a href="https://play.dmengineapp.com">Play in browser</a>
           <a href="https://apps.apple.com/app/id6762107792">App Store</a>
           <a href="#features">Features</a>
           <a href="#pricing">Pricing</a>
