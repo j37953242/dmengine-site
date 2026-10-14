@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /reset.html
+Disallow: /docs/
+Disallow: /scripts/
+
+Sitemap: https://dmengineapp.com/sitemap.xml
