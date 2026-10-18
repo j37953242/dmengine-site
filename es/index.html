@@ -43,7 +43,11 @@ nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(10,10,12,.82);-we
 .nav-in{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:20px}
 .brand{display:flex;align-items:center;gap:11px;font-size:13px;font-weight:600;letter-spacing:.32em;color:var(--gold);white-space:nowrap}
 .brand svg{width:24px;height:24px;flex:none}
-.lang{margin-left:auto;font-size:13px;color:var(--mut)}
+.langs{margin-left:auto;display:flex;align-items:center;gap:7px;font-size:13px;color:var(--mut);white-space:nowrap}
+.langs a{color:var(--mut)}
+.langs a:hover{color:var(--ink)}
+.langs [aria-current]{color:var(--gold)}
+@media (max-width:400px){.langs{gap:5px;font-size:12px}}
 .lang:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:999px;padding:13px 28px;font-size:15px;font-weight:600;white-space:nowrap;transition:transform .2s,background .2s,border-color .2s}
 .btn:hover{transform:translateY(-1px)}
@@ -116,7 +120,7 @@ footer a:hover{color:var(--ink)}
       <svg viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,8 52,20 52,44 32,56 12,44 12,20" fill="none" stroke="#C9A84C" stroke-width="3"/><line x1="32" y1="8" x2="32" y2="56" stroke="#C9A84C" stroke-width="1.4" opacity=".55"/><line x1="12" y1="20" x2="52" y2="44" stroke="#C9A84C" stroke-width="1.4" opacity=".55"/><line x1="52" y1="20" x2="12" y2="44" stroke="#C9A84C" stroke-width="1.4" opacity=".55"/></svg>
       DM ENGINE
     </a>
-    <a class="lang" href="/" hreflang="en" lang="en">English</a>
+    <div class="langs" aria-label="Idioma"><a href="/" hreflang="en" lang="en">EN</a><span aria-hidden="true">·</span><a href="/zh/" hreflang="zh-Hant" lang="zh-Hant">中文</a><span aria-hidden="true">·</span><a href="/es/" lang="es" aria-current="page">ES</a></div>
     <a class="btn btn-gold" href="https://play.dmengineapp.com">Juega gratis</a>
   </div>
 </nav>
