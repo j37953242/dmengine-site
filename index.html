@@ -93,6 +93,14 @@ nav{
 .btn-ghost:hover{background:rgba(201,168,76,.08)}
 nav .btn{padding:8px 18px;font-size:13px}
 nav .btn{white-space:nowrap}
+.langs{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut);padding-left:22px;border-left:1px solid var(--line-soft)}
+.langs a{color:var(--mut);transition:color .2s}
+.langs a:hover,.langs a:focus-visible{color:var(--ink)}
+.langs [aria-current]{color:var(--gold)}
+.lang-strip{display:none;position:absolute;top:72px;left:0;right:0;z-index:2;justify-content:center;align-items:center;gap:10px;font-size:13px;color:var(--mut)}
+.lang-strip a{color:var(--mut);padding:6px 2px}
+.lang-strip [aria-current]{color:var(--gold)}
+@media (max-width:900px){.langs{display:none}.lang-strip{display:flex}}
 
 /* ---------- hero ---------- */
 .hero{
@@ -397,12 +405,22 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
       <a href="#worlds">Worlds</a>
       <a href="#pricing">Pricing</a>
     </div>
+    <div class="langs" aria-label="Language">
+      <a href="/" aria-current="page" lang="en">EN</a><span aria-hidden="true">·</span>
+      <a href="/zh/" hreflang="zh-Hant" lang="zh-Hant">中文</a><span aria-hidden="true">·</span>
+      <a href="/es/" hreflang="es" lang="es">ES</a>
+    </div>
     <a class="btn btn-ghost" style="margin-left:auto" href="https://play.dmengineapp.com">Play now</a>
     <a class="btn btn-gold" href="https://apps.apple.com/app/id6762107792">Download</a>
   </div>
 </nav>
 
 <header class="hero" id="top">
+  <div class="lang-strip" aria-label="Language">
+    <a href="/" aria-current="page" lang="en">English</a><span aria-hidden="true">·</span>
+    <a href="/zh/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><span aria-hidden="true">·</span>
+    <a href="/es/" hreflang="es" lang="es">Español</a>
+  </div>
   <canvas id="ico" width="600" height="600" role="button" tabindex="0" aria-label="A twenty-sided die. Tap to roll."></canvas>
   <div class="die-line" id="dieLine" aria-live="polite">TAP THE DIE</div>
   <h1 id="heroTitle">Every story needs a Dungeon&nbsp;Master. <span class="gold">Now you have one.</span></h1>
