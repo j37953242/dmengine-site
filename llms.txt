@@ -1,0 +1,33 @@
+# DM Engine
+
+> DM Engine is an AI Dungeon Master that runs complete 5e-compatible tabletop RPG campaigns. Play solo or host a group of up to 4 players. Free to start in a web browser or on iPhone.
+
+The DM describes each scene, plays the characters you meet and asks for ability checks and saving throws when the story calls for them. Players roll an animated d20 and the result counts. Combat follows the 5e rules: initiative, attack rolls, spell slots, conditions, traps, surprise rounds and death saves are tracked turn by turn. The campaign remembers choices across sessions. Scenes are narrated out loud, with AI scene art and maps.
+
+Friends join a group game free with a 6-digit code, from a browser or an iPhone. Four worlds are available: classic high fantasy, a war in the Nine Hells, gothic horror and magic-powered noir. The app is available in English, Spanish and Traditional Chinese.
+
+## Play
+
+- [Play in your browser](https://play.dmengineapp.com): the full game on the web, no download needed
+- [DM Engine on the App Store](https://apps.apple.com/app/id6762107792): the iPhone app, same account as the web
+
+## Pages
+
+- [Home](https://dmengineapp.com/): features, worlds and pricing
+- [Solo play](https://dmengineapp.com/solo/): playing D&D-style campaigns alone with an AI Dungeon Master
+- [Play with friends](https://dmengineapp.com/group/): online group games with no human DM needed
+- [繁體中文](https://dmengineapp.com/zh/): Traditional Chinese page
+
+## Pricing
+
+- Free: 200 Embers to start, plus free Embers every day you log in. Each DM reply costs 2 Embers.
+- Adventurer: $7.99 a month, 500 Embers a month, voice narration at no Ember cost
+- Guild: $14.99 a month, 1,200 Embers a month, host multiplayer for up to 4 players
+- Archmage: $99.99 a month, 8,000 Embers a month
+- Ember packs: available anytime, starting with a one-time $0.99 Starter pack
+
+## Contact
+
+- Support: support@dmengineapp.com
+
+DM Engine is an independent product. It is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC.
