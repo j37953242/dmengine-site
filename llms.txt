@@ -17,6 +17,7 @@ Friends join a group game free with a 6-digit code, from a browser or an iPhone.
 - [Solo play](https://dmengineapp.com/solo/): playing D&D-style campaigns alone with an AI Dungeon Master
 - [Play with friends](https://dmengineapp.com/group/): online group games with no human DM needed
 - [繁體中文](https://dmengineapp.com/zh/): Traditional Chinese page
+- [About](https://dmengineapp.com/about/): who makes DM Engine and how to contact us
 
 ## Pricing
 
