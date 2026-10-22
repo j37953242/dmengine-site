@@ -4,7 +4,7 @@
 
 The DM describes each scene, plays the characters you meet and asks for ability checks and saving throws when the story calls for them. Players roll an animated d20 and the result counts. Combat follows the 5e rules: initiative, attack rolls, spell slots, conditions, traps, surprise rounds and death saves are tracked turn by turn. The campaign remembers choices across sessions. Scenes are narrated out loud, with AI scene art and maps.
 
-Friends join a group game free with a 6-digit code, from a browser or an iPhone. Four worlds are available: classic high fantasy, a war in the Nine Hells, gothic horror and magic-powered noir. The app is available in English, Spanish and Traditional Chinese.
+Friends join a group game free with a 6-digit code, from a browser or an iPhone. Four worlds are available: classic high fantasy, a war in a hell, gothic horror and magic-powered noir. The app is available in English, Spanish and Traditional Chinese.
 
 ## Play
 
