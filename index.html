@@ -27,9 +27,7 @@
 <meta name="apple-itunes-app" content="app-id=6762107792">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://dmengineapp.com/#org", "name": "DM Engine", "url": "https://dmengineapp.com/", "logo": "https://dmengineapp.com/logo.png", "email": "support@dmengineapp.com", "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "email": "support@dmengineapp.com", "availableLanguage": ["English", "Spanish", "Chinese"]}, "sameAs": ["https://apps.apple.com/app/id6762107792"]}, {"@type": "WebSite", "@id": "https://dmengineapp.com/#site", "name": "DM Engine", "url": "https://dmengineapp.com/", "publisher": {"@id": "https://dmengineapp.com/#org"}}, {"@type": "VideoGame", "name": "DM Engine", "url": "https://dmengineapp.com/", "description": "An AI Dungeon Master that runs full 5e campaigns: narration, real dice, combat, and a story that remembers. Play solo or host up to 4 friends. Free to start in your browser or on iPhone.", "image": "https://dmengineapp.com/og-image.png", "genre": ["Role-playing game", "Tabletop RPG"], "gamePlatform": ["Web browser", "iOS"], "applicationCategory": "GameApplication", "operatingSystem": "Web, iOS", "playMode": ["SinglePlayer", "MultiPlayer"], "numberOfPlayers": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 4}, "inLanguage": ["en", "es", "zh-Hant"], "sameAs": ["https://apps.apple.com/app/id6762107792", "https://play.dmengineapp.com/"], "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "url": "https://play.dmengineapp.com/"}, {"@type": "Offer", "name": "Adventurer", "price": "7.99", "priceCurrency": "USD", "url": "https://play.dmengineapp.com/"}, {"@type": "Offer", "name": "Guild", "price": "14.99", "priceCurrency": "USD", "url": "https://play.dmengineapp.com/"}, {"@type": "Offer", "name": "Archmage", "price": "99.99", "priceCurrency": "USD", "url": "https://play.dmengineapp.com/"}], "publisher": {"@id": "https://dmengineapp.com/#org"}}, {"@type": "WebPage", "@id": "https://dmengineapp.com/#page", "url": "https://dmengineapp.com/", "name": "DM Engine — AI Dungeon Master for 5e", "isPartOf": {"@id": "https://dmengineapp.com/#site"}, "publisher": {"@id": "https://dmengineapp.com/#org"}, "dateModified": "2026-10-18", "inLanguage": "en"}, {"@type": "FAQPage", "@id": "https://dmengineapp.com/#faq", "mainEntity": [{"@type": "Question", "name": "Can I play D&D alone with DM Engine?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. DM Engine is an AI Dungeon Master, so you can run a full 5e-style campaign by yourself. It sets each scene, plays the characters you meet and asks for rolls when the story needs them."}}, {"@type": "Question", "name": "Can I play with friends?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A Guild member can host a game for up to 4 players. Friends join free with a 6-digit code, from a web browser or an iPhone."}}, {"@type": "Question", "name": "Is DM Engine free?", "acceptedAnswer": {"@type": "Answer", "text": "It is free to start. You get 200 Embers when you sign up and free Embers every day you log in. Each DM reply costs 2 Embers. Paid plans start at $7.99 a month."}}, {"@type": "Question", "name": "Do I need to download anything?", "acceptedAnswer": {"@type": "Answer", "text": "No. You can play in your browser at play.dmengineapp.com. There is also an iPhone app on the App Store, and the same account works on both."}}, {"@type": "Question", "name": "Does it follow the 5e rules?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Ability checks, saving throws, initiative, attack rolls, spell slots, conditions and death saves are all tracked, and you roll a real animated d20."}}, {"@type": "Question", "name": "Is DM Engine an official D&D product?", "acceptedAnswer": {"@type": "Answer", "text": "No. DM Engine is an independent product and is not affiliated with Wizards of the Coast. It uses material from the System Reference Document 5.1 under the Creative Commons license."}}]}]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0C'/%3E%3Cpolygon points='32,12 49,22 49,42 32,52 15,42 15,22' fill='none' stroke='%23C9A84C' stroke-width='2.5'/%3E%3Cline x1='32' y1='12' x2='32' y2='52' stroke='%23C9A84C' stroke-width='1.2' opacity='.6'/%3E%3Cline x1='15' y1='22' x2='49' y2='42' stroke='%23C9A84C' stroke-width='1.2' opacity='.6'/%3E%3Cline x1='49' y1='22' x2='15' y2='42' stroke='%23C9A84C' stroke-width='1.2' opacity='.6'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link href="/fonts/cormorant-garamond.css" rel="stylesheet">
 <style>
 :root{
   --bg:#0A0A0C;
@@ -389,9 +387,11 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
   section{padding:88px 0}
   .quote{width:240px}
 }
+.skip{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 16px;border-radius:8px;background:#C9A84C;color:#0A0A0A;font-weight:600;text-decoration:none}.skip:focus{top:12px}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <nav>
   <div class="nav-in">
@@ -415,6 +415,7 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
   </div>
 </nav>
 
+<main id="main">
 <header class="hero" id="top">
   <div class="lang-strip" aria-label="Language">
     <a href="/" aria-current="page" lang="en">English</a><span aria-hidden="true">·</span>
@@ -677,6 +678,8 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 48px}
     <canvas id="fire" aria-hidden="true"></canvas>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">

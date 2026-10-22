@@ -24,9 +24,7 @@
 <meta name="twitter:image" content="https://dmengineapp.com/og-image.png">
 <meta name="apple-itunes-app" content="app-id=6762107792">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0C'/%3E%3Cpolygon points='32,12 49,22 49,42 32,52 15,42 15,22' fill='none' stroke='%23C9A84C' stroke-width='3'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link href="/fonts/noto-serif-tc.css" rel="stylesheet">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://dmengineapp.com/zh/#page", "url": "https://dmengineapp.com/zh/", "inLanguage": "zh-Hant", "isPartOf": {"@id": "https://dmengineapp.com/#site"}, "publisher": {"@id": "https://dmengineapp.com/#org"}, "dateModified": "2026-10-18"}, {"@type": "VideoGame", "name": "DM Engine", "url": "https://dmengineapp.com/zh/", "inLanguage": "zh-Hant", "description": "AI 地下城主用 5e 規則帶你跑團。單人或最多 4 人，繁體中文，瀏覽器或 iPhone 免費開始。", "image": "https://dmengineapp.com/og-image.png", "genre": ["角色扮演", "TRPG"], "gamePlatform": ["Web browser", "iOS"], "playMode": ["SinglePlayer", "MultiPlayer"], "numberOfPlayers": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 4}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://play.dmengineapp.com/"}, "publisher": {"@id": "https://dmengineapp.com/#org"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "不會 TRPG 也能玩嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。直接用中文打出你想做的事，規則、擲骰和戰鬥都交給 AI 地下城主。"}}, {"@type": "Question", "name": "可以一個人玩嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。AI 地下城主會為你一個人跑完整的戰役：說故事、扮演你遇到的每個角色和怪物，需要時叫你擲骰。"}}, {"@type": "Question", "name": "真的免費嗎？", "acceptedAnswer": {"@type": "Answer", "text": "註冊就送 200 火種，每天登入還能再領。DM 每次回應用掉 2 火種，用完可以買火種包或訂閱。"}}, {"@type": "Question", "name": "可以跟朋友一起玩嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。Guild 會員可以開團，最多 4 位玩家；朋友只要註冊帳號、輸入 6 位數房號就能免費加入。"}}, {"@type": "Question", "name": "Android 手機可以玩嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以，用手機瀏覽器打開 play.dmengineapp.com 就能玩，不用下載。iPhone 也有 App。"}}, {"@type": "Question", "name": "有繁體中文嗎？", "acceptedAnswer": {"@type": "Answer", "text": "有。開新戰役時選繁體中文，DM 的旁白和回應就會用繁體中文。"}}, {"@type": "Question", "name": "DM Engine 是 D&D 官方產品嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不是。DM Engine 是獨立開發的產品，與 Wizards of the Coast 無關。內容使用依創用 CC 授權釋出的 System Reference Document 5.1。"}}]}]}</script>
 <style>
 :root{--bg:#0A0A0C;--bg2:#111114;--bg3:#16140F;--gold:#C9A84C;--gold-deep:#8F7836;--ink:#EDEAE2;--mut:#8A8578;
@@ -109,9 +107,11 @@ footer a:hover{color:var(--ink)}
 @media (max-width:760px){.grid3{grid-template-columns:1fr}.party{grid-template-columns:1fr}
 .nav-in{gap:10px;padding:12px 16px}.brand{letter-spacing:.2em}nav .btn{padding:7px 12px;font-size:12px}.hide-sm{display:none}}
 @media (max-width:560px){.price-grid{grid-template-columns:1fr}section{padding:72px 0}}
+.skip{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 16px;border-radius:8px;background:#C9A84C;color:#0A0A0A;font-weight:600;text-decoration:none}.skip:focus{top:12px}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">跳到主要內容</a>
 
 <nav>
   <div class="nav-in">
@@ -124,6 +124,7 @@ footer a:hover{color:var(--ink)}
   </div>
 </nav>
 
+<main id="main">
 <header class="hero" id="top">
   <div class="wrap">
     <p class="eyebrow">AI 地下城主・線上跑團</p>
@@ -269,6 +270,8 @@ footer a:hover{color:var(--ink)}
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">

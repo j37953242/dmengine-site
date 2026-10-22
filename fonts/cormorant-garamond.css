@@ -1,0 +1,49 @@
+/* Self-hosted from @fontsource (SIL Open Font License 1.1). No request leaves dmengineapp.com. */
+/* cormorant-garamond-latin-ext-500-normal */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(/fonts/cormorant-garamond/cormorant-garamond-latin-ext-500-normal.woff2) format('woff2');
+}
+/* cormorant-garamond-latin-500-normal */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(/fonts/cormorant-garamond/cormorant-garamond-latin-500-normal.woff2) format('woff2');
+}
+/* cormorant-garamond-latin-ext-600-normal */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(/fonts/cormorant-garamond/cormorant-garamond-latin-ext-600-normal.woff2) format('woff2');
+}
+/* cormorant-garamond-latin-600-normal */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(/fonts/cormorant-garamond/cormorant-garamond-latin-600-normal.woff2) format('woff2');
+}
+/* cormorant-garamond-latin-ext-700-normal */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(/fonts/cormorant-garamond/cormorant-garamond-latin-ext-700-normal.woff2) format('woff2');
+}
+/* cormorant-garamond-latin-700-normal */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(/fonts/cormorant-garamond/cormorant-garamond-latin-700-normal.woff2) format('woff2');
+}

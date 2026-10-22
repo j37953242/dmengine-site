@@ -25,9 +25,7 @@
 <meta name="twitter:image" content="https://dmengineapp.com/og-image.png">
 <meta name="apple-itunes-app" content="app-id=6762107792">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0C'/%3E%3Cpolygon points='32,12 49,22 49,42 32,52 15,42 15,22' fill='none' stroke='%23C9A84C' stroke-width='3'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<link href="/fonts/cormorant-garamond.css" rel="stylesheet">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://dmengineapp.com/es/#page", "url": "https://dmengineapp.com/es/", "name": "DM Engine | Dungeon Master con IA: juega rol 5e gratis en tu navegador o iPhone", "description": "¿Sin DM? El Dungeon Master con IA de DM Engine dirige tu partida con reglas 5e: narra, te pide tiradas, lleva el combate y recuerda cada decisión. Solo o con hasta 4 amigos, en español. Gratis para empezar.", "inLanguage": "es", "isPartOf": {"@id": "https://dmengineapp.com/#site"}, "publisher": {"@id": "https://dmengineapp.com/#org"}, "dateModified": "2026-10-18"}, {"@type": "VideoGame", "name": "DM Engine", "url": "https://dmengineapp.com/es/", "inLanguage": "es", "description": "Un Dungeon Master con IA que dirige partidas de rol con reglas 5e. Solo o hasta 4 jugadores, en español, gratis para empezar en el navegador o en iPhone.", "image": "https://dmengineapp.com/og-image.png", "genre": ["Juego de rol", "Rol de mesa"], "gamePlatform": ["Web browser", "iOS"], "playMode": ["SinglePlayer", "MultiPlayer"], "numberOfPlayers": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 4}, "publisher": {"@id": "https://dmengineapp.com/#org"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://play.dmengineapp.com/"}}, {"@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Puedo jugar aunque no conozca las reglas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Escribe lo que quieres hacer con tus propias palabras y el Dungeon Master con IA se encarga de las reglas, las tiradas y el combate."}}, {"@type": "Question", "name": "¿Puedo jugar solo?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El DM dirige una campaña completa para un solo jugador: narra, interpreta a cada personaje y monstruo, y te pide tiradas cuando hace falta."}}, {"@type": "Question", "name": "¿Es gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Al registrarte recibes 200 brasas y cada día que entras recibes más. Cada respuesta del DM cuesta 2 brasas. Cuando se acaban, puedes comprar un paquete o suscribirte."}}, {"@type": "Question", "name": "¿Puedo jugar con amigos?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Un miembro Guild puede crear una partida de hasta 4 jugadores. Tus amigos solo necesitan una cuenta y el código de 6 dígitos para unirse gratis."}}, {"@type": "Question", "name": "¿Funciona en Android?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Abre play.dmengineapp.com en el navegador de tu teléfono y juega sin descargar nada. En iPhone también hay app."}}, {"@type": "Question", "name": "¿Está en español?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Al crear una campaña nueva, elige español y el DM narrará y responderá en español."}}, {"@type": "Question", "name": "¿Es un producto oficial de D&D?", "acceptedAnswer": {"@type": "Answer", "text": "No. DM Engine es un producto independiente y no está afiliado a Wizards of the Coast. Usa material del System Reference Document 5.1 bajo licencia Creative Commons."}}]}]}</script>
 <style>
 :root{--bg:#0A0A0C;--bg2:#111114;--bg3:#16140F;--gold:#C9A84C;--gold-deep:#8F7836;--ink:#EDEAE2;--mut:#8A8578;
@@ -110,9 +108,11 @@ footer a:hover{color:var(--ink)}
 @media (max-width:760px){.grid3{grid-template-columns:1fr}.party{grid-template-columns:1fr}
 .nav-in{gap:10px;padding:12px 16px}.brand{letter-spacing:.2em}nav .btn{padding:7px 12px;font-size:12px}.hide-sm{display:none}}
 @media (max-width:560px){.price-grid{grid-template-columns:1fr}section{padding:72px 0}}
+.skip{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 16px;border-radius:8px;background:#C9A84C;color:#0A0A0A;font-weight:600;text-decoration:none}.skip:focus{top:12px}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <nav>
   <div class="nav-in">
@@ -125,6 +125,7 @@ footer a:hover{color:var(--ink)}
   </div>
 </nav>
 
+<main id="main">
 <header class="hero" id="top">
   <div class="wrap">
     <p class="eyebrow">DUNGEON MASTER CON IA · ROL ONLINE</p>
@@ -266,6 +267,8 @@ footer a:hover{color:var(--ink)}
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
